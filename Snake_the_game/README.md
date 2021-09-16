@@ -1,6 +1,6 @@
 # PLAY SNAKE
 
-![alt text](https://github.com/Meusz_Games/Snake_the_game/Resources/Game_Play_Example.gif "Game_Gif")
+![alt text](https://github.com/Meusz/Meusz_Games/blob/main/Snake_the_game/Resources/Game_Play_Example.gif "Game Gif")
 
 
 ### HOW TO PLAY SNAKE
