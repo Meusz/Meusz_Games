@@ -29,3 +29,5 @@ def colision(dino_rect,obstacles_rect_list):
             if dino_rect.colliderect(obstacle[1]):
                 return True
     return False
+
+

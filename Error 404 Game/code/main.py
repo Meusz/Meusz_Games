@@ -4,6 +4,22 @@ from variables import *
 from functions import *
 from random import randint
 
+def dino_animation():
+    global dino_surface, dino_index
+    #Play walking animation if dino on floor
+    #Display stand surface when player is not on the floor
+
+    if dino_rect.y < floor_dino:
+        #Jump
+        dino_surface = dino_stand_surface
+    else:
+        #Walk
+        dino_index += 0.1
+        if dino_index >= len(dino_walk):
+            dino_index = 0
+        dino_surface = dino_walk[int(dino_index)]
+
+
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
 screen.fill("White")
@@ -19,22 +35,33 @@ foreground = pygame.image.load('../graphics/foreground.png').convert_alpha()
 
 #Obstacles
 cactus = pygame.image.load('../graphics/cactus.png').convert_alpha()
-cactus_rect = cactus.get_rect(bottomleft=(800, floor_cactus))
 cactus2 = pygame.image.load('../graphics/cactus2.png').convert_alpha()
-cactus2_rect = cactus2.get_rect(bottomleft=(800, floor_cactus))
 cactus3 = pygame.image.load('../graphics/cactus3.png').convert_alpha()
-cactus3_rect = cactus3.get_rect(bottomleft=(800, floor_cactus))
 
+pterodactyl = pygame.image.load('../graphics/pterodactyl1.png').convert_alpha()
+
+#cactus3.get_rect(bottomleft=(position, floor_cactus)
 obstacles_rect_list = []
 
 #Dino
-dino_surface = pygame.image.load('../graphics/dino_stand.png').convert_alpha()
-dino_rect = dino_surface.get_rect(topleft=(y_dino, floor_dino))
+dino_stand_surface = pygame.image.load('../graphics/dino_stand.png').convert_alpha()
+dino_rect = dino_stand_surface.get_rect(topleft=(y_dino, floor_dino))
 
+dino_walk1_surface = pygame.image.load('../graphics/dino_walk1.png').convert_alpha()
+dino_walk1_rect = dino_walk1_surface.get_rect(topleft=(y_dino, floor_dino))
+
+dino_walk2_surface = pygame.image.load('../graphics/dino_walk2.png').convert_alpha()
+dino_walk2_rect = dino_walk2_surface.get_rect(topleft=(y_dino, floor_dino))
+
+dino_walk = [dino_walk1_surface,dino_walk2_surface]
+dino_index = 0
 
 dino_dead_surface = pygame.image.load('../graphics/dino_dead.png').convert_alpha()
-dino_dead_rect = dino_surface.get_rect(topleft=(y_dino, floor_dino))
+dino_dead_rect = dino_dead_surface.get_rect(topleft=(y_dino, floor_dino))
+dino_surface = dino_stand_surface
 
+
+#Text
 restart_surface = pygame.image.load('../graphics/restart.png').convert_alpha()
 restart_rect = restart_surface.get_rect(midbottom=(380, 150))
 
@@ -47,7 +74,7 @@ clock = pygame.time.Clock()  # Variable to control time and frame rate
 
 #Timer
 obstacle_timer = pygame.USEREVENT + 1
-pygame.time.set_timer(obstacle_timer,900)
+pygame.time.set_timer(obstacle_timer,1200)
 
 while True:
     # Event Loop
@@ -63,14 +90,20 @@ while True:
                 obstacles_rect_list = []
                 start_time = int(pygame.time.get_ticks()/100)
         if game_active and event.type == obstacle_timer:
-            obstacle = randint(1,3)
+            if int(pygame.time.get_ticks()/100) - start_time > 200:
+                obstacle = randint(1,4)
+            else:
+                obstacle = randint(1, 3)
             position = randint(900,1100)
             if obstacle ==1:
                 obstacles_rect_list.append( (cactus, cactus.get_rect(bottomleft=(position, floor_cactus))) )
             elif obstacle ==2:
                 obstacles_rect_list.append( (cactus2,cactus2.get_rect(bottomleft=(position, floor_cactus))) )
-            else:
+            elif obstacle == 3:
                 obstacles_rect_list.append( (cactus3,cactus3.get_rect(bottomleft=(position, floor_cactus))) )
+            else:
+                obstacles_rect_list.append((pterodactyl, pterodactyl.get_rect(bottomleft=(position, floor_pterodactyl))))
+
 
     if game_active:
         # Attach one surface into another
@@ -78,11 +111,11 @@ while True:
 
         #Obstacle Movement
         obstacle_movement(screen, obstacles_rect_list)
-
         # Dino
         dino_rect.y += dino_gravity
         screen.blit(dino_surface, dino_rect)
-
+        dino_animation()
+        #When dino is on the air, some gravity must be applyed
         if (dino_rect.y < floor_dino):
             dino_gravity += 1
         else:
