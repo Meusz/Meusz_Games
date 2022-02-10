@@ -4,6 +4,7 @@ from variables import *
 from Dino_class import *
 from Cactus_class import *
 from Pterodactyl_class import *
+from Foreground_class import *
 from functions import *
 from random import randint
 
@@ -20,7 +21,9 @@ text_font = pygame.font.Font('../font/Pixeltype.ttf', 50)
 score_font = pygame.font.Font('../font/Pixeltype.ttf', 30)
 
 #Foreground
-foreground = pygame.image.load('../graphics/foreground.png').convert_alpha()
+foreground = pygame.sprite.Group()
+foreground.add(Foreground(0), Foreground(1200))
+
 
 #Obstacles
 obstacles_rect_list = pygame.sprite.Group()
@@ -40,9 +43,10 @@ clock = pygame.time.Clock()  # Variable to control time and frame rate
 
 #Timer
 obstacle_timer = pygame.USEREVENT + 1
-pygame.time.set_timer(obstacle_timer,1200)
+pygame.time.set_timer(obstacle_timer, 1200)
 
 while True:
+    screen.fill("White")
     # Event Loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -65,7 +69,13 @@ while True:
 
     if game_active:
         # Attach one surface into another
-        screen.blit(foreground, (0, 0))
+
+        #Foreground
+
+        foreground.draw(screen)
+        foreground.update()
+        if len(foreground) < 2 :
+            foreground.add(Foreground(1200))
 
         # Collision
         game_active = colision_sprite(dino,obstacles_rect_list)
@@ -83,11 +93,12 @@ while True:
         # Score
         high_score = display_score(screen,score_font,high_score,start_time,game_active)
     else:
-        screen.blit(foreground, (0, 0))
+        foreground.draw(screen)
         screen.blit(text_gameover_surface, text_gameover_rect)
         screen.blit(restart_surface, restart_rect)
         obstacles_rect_list.draw(screen)
         dino.draw(screen)
+
 
 
     pygame.display.update()
