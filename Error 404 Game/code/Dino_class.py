@@ -25,7 +25,7 @@ class Dino(pygame.sprite.Sprite):
         self.dead_sprite = pygame.image.load('../graphics/dino_dead.png').convert_alpha()
         # Rectangles and physics
         self.rect_up = self.stand_sprite.get_rect(topleft=(y_dino, floor_dino))
-        self.rect_down = low1_sprite.get_rect(topleft=(y_dino, floor_dino+100))
+        self.rect_down = low1_sprite.get_rect(bottomleft=(y_dino, floor_low_dino))
 
         self.rect = self.rect_up
         self.gravity = 0
@@ -47,10 +47,14 @@ class Dino(pygame.sprite.Sprite):
 
 
     def apply_gravity(self):
+
         self.gravity +=1
-        self.rect.y += self.gravity
+        self.rect.y += self.gravity     #Apply gravity to dino
         if self.rect.y >= floor_dino:
-            self.rect.y = floor_dino
+            if self.low:
+                self.rect.y = floor_low_dino
+            else:
+                self.rect.y = floor_dino
 
     def dino_animation(self):
 

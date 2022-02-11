@@ -58,7 +58,8 @@ while True:
                 obstacles_rect_list.empty()
                 start_time = int(pygame.time.get_ticks()/100)
         if game_active and event.type == obstacle_timer:
-            if not int(pygame.time.get_ticks()/100) - start_time > 200:
+            #print(int(pygame.time.get_ticks()/100))
+            if  int(pygame.time.get_ticks()/100) - start_time > 200:
                 obstacle = randint(1, 2)
             else:
                 obstacle = 1
