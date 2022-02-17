@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c2948e-4481-42e0-ae1f-ec8fc9f17903" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Space_Invaders/code/Alien_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Space_Invaders/code/Block_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Space_Invaders/font/Pixeltype.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error 404 Game/Resources/Game_example.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Error 404 Game/Resources/Game_example.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error 404 Game/code/Dino_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Error 404 Game/code/Dino_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error 404 Game/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Error 404 Game/code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error 404 Game/code/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Error 404 Game/code/variables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error 404 Game/graphics/foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/Error 404 Game/graphics/foreground.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +36,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Error 404 Game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Space_Invaders" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Space_Invaders" />
+      <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Basic Examples" />
+      <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Snake" />
       <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Error 404 Game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Space_Invaders" />
+      <recent name="C:\Users\Franklin\Desktop\Meusz_Games" />
       <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Error 404 Game\Resources" />
       <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Error 404 Game\code" />
       <recent name="C:\Users\Franklin\Desktop\Meusz_Games\Basic Examples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.main (2)">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Meusz_Games" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,6 +96,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Meusz_Games" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Space_Invaders/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Space_Invaders/code/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Meusz_Games" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,9 +142,11 @@
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
       </list>
