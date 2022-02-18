@@ -9,9 +9,10 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(midbottom = pos)
         self.ready = True
         self.laser_time = 0
-        self.laser_cooldown = 2000
+        self.laser_cooldown = 400
         self.speed = 5
         self.lasers = pygame.sprite.Group()
+        self.life = 3
 
     def player_input(self):
         keys = pygame.key.get_pressed()
@@ -37,6 +38,12 @@ class Player(pygame.sprite.Sprite):
 
     def shoot(self):
         self.lasers.add(Laser(self.rect.center,1))
+
+    def damaged(self):
+        self.life -=1
+
+    def alive(self):
+        return self.life > 0
 
     def update(self):
         self.player_input()

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c2948e-4481-42e0-ae1f-ec8fc9f17903" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Space_Invaders/code/Alien_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Space_Invaders/code/Block_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Space_Invaders/font/Pixeltype.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space_Invaders/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Space_Invaders/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space_Invaders/code/Alien_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space_Invaders/code/Alien_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space_Invaders/code/Player_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space_Invaders/code/Player_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space_Invaders/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Space_Invaders/code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
