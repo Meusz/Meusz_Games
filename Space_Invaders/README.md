@@ -1,6 +1,6 @@
 # PLAY SPACE INVADERS
 
-![alt text](https://github.com/Meusz/Meusz_Games/blob/main/Space_Invader/Resources/Game_Play_Example.gif "Game Gif")
+![alt text](https://github.com/Meusz/Meusz_Games/blob/main/Space_Invaders/Resources/Game_example.gif "Game Gif")
 
 
 ### HOW TO PLAY SPACE INVADERS
